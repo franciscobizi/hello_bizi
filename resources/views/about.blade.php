@@ -9,7 +9,7 @@
               <nav class="blog-nav">
                 <a class="blog-nav-item " href="http://localhost/laravel_blog/public/">Home</a>
                 <a class="blog-nav-item " href="http://localhost/laravel_blog/public/create">New article</a>
-                <a class="blog-nav-item active" href="http://localhost/laravel_blog/public/About">About</a>
+                <a class="blog-nav-item active" href="http://localhost/laravel_blog/public/about">About</a>
                 
                 
               </nav>

@@ -17,9 +17,9 @@
   
         
         <table class="table-striped">
-            <tr><td>TITLE</td><td >AUTHOR</td><td >ACTIONS</td></tr>
+            <tr><td> TITLE </td> <td > AUTHOR </td> <td > ACTIONS </td></tr>
             @foreach($news as $new)
-            <tr><td >{{ $new->title }} </td><td >{{ $new->author }} </td><td ><a href="http://localhost/laravel_blog/public/delete/{{ $new->id }}">Delete</a> / <a href="http://localhost/laravel_blog/public/edit/{{$new->id}}">Edit</a></td></tr>
+            <tr><td >{{ $new->title }} </td> <td >{{ $new->author }} </td> <td ><a href="http://localhost/laravel_blog/public/delete/{{ $new->id }}">Delete</a> / <a href="http://localhost/laravel_blog/public/edit/{{$new->id}}">Edit</a></td></tr>
             @endforeach
             
         </table>

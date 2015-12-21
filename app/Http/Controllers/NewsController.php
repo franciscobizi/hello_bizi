@@ -33,16 +33,16 @@ class NewsController extends Controller
                 $ne = new \App\News();
                 $news = $ne->find($id);
                 $imagem = $news->title;
-                //$url = "http://www.blogwebdesignmicrocamp.com.br/wp-content/uploads/2015/09/carro.png";
-                $url = "http://www.google.com.br/search?hl=pt-BR&safe=off&gbv=2&sout=1&biw=1024&bih=548&tbm=isch&sa=1&q=".$imagem.".png";
-                //$url =  "http://ajax.googleapis.com/ajax/services/search/images?v=2.0&hl=pt-br&cr=countryBR&q=".$imagem;
+                $url = "http://www.blogwebdesignmicrocamp.com.br/wp-content/uploads/2015/09/carro.png";
+                //$url = "http://www.google.com.br/search?hl=pt-BR&safe=off&gbv=2&sout=1&biw=1024&bih=548&tbm=isch&sa=1&q=".$imagem.".png";
+                
                 $ext = pathinfo($url,PATHINFO_EXTENSION);
                 $nomeImage = str_random(4).'-'.str_slug($imagem).'.'.$ext;
                 $file = file_get_contents($url);
                 file_put_contents('C:/xampp/htdocs/laravel/public/assets/img/'.$nomeImage, $file);
                 $showImage = '<img src="http://localhost/laravel/public/assets/img/'.$nomeImage.'" width="200" height="200">';
                 
-                return view('editar', ['showImage'=>$showImage,'news'=>$news]);
+                return view('edit', ['showImage'=>$showImage,'news'=>$news]);
     
     }
     
@@ -75,4 +75,5 @@ class NewsController extends Controller
         return view('about');
     
     }
+    
 }
