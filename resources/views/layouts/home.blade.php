@@ -14,21 +14,19 @@
         <div class="blog-masthead">
             <div class="container">
               <nav class="blog-nav">
-                <a class="blog-nav-item active" href="http://localhost/laravel/public/">Home</a>
-                <a class="blog-nav-item" href="http://localhost/laravel/public/create">New article</a>
-                <a class="blog-nav-item" href="http://localhost/laravel/public/noticia">Articles</a>
+                <a class="blog-nav-item active" href="http://localhost/laravel_blog/public/">Home</a>
+                <a class="blog-nav-item" href="http://localhost/laravel_blog/public/create">New article</a>
+                <a class="blog-nav-item" href="http://localhost/laravel_blog/public/about">About</a>
                 
                 
               </nav>
             </div>
-        </div>    
+        </div>
+        
         @show
 
         <div class="container">
-            <div class="blog-header">
-                <h1 class="blog-title">IT BLOG</h1>
-                <p class="lead blog-description">The best blog witch give you the information about the World IT.</p>
-            </div>
+            
             
             <div class="col-sm-8 blog-main">
                 @yield('content')
@@ -41,7 +39,7 @@
         <div class="tb"></div>
         @yield('footer')
          <footer class="blog-footer ">
-             <p> 2015 &COPY; Powered by Francisco Bizi</p>
+             <p> 2015 &COPY; All rights reserved</p>
             <p>
               <a href="#">Back to top</a>
             </p>

@@ -12,18 +12,18 @@ class NewsController extends Controller
     public function index(){
         $new = new \App\News();
         $news = $new->all();
-        return view('new.noticia', ['news'=>$news]);
+        return view('welcome', ['news'=>$news]);
     
     }
     public function create(){
-        //return view('create');
-        return View::make('create');
+        return view('create');
+        //return View::make('create');
     }
     public function edit($id){
         $ne = new \App\News();
         $news = $ne->find($id);
         
-        return view('editar', ['news'=>$news]);
+        return view('edit', ['news'=>$news]);
         
     
     
@@ -51,7 +51,7 @@ class NewsController extends Controller
         $new = new \App\News();
         $new = $new->find($id)->update($request->all());
         
-        return redirect('noticia');
+        return redirect('/');
     
     }
     
@@ -59,14 +59,20 @@ class NewsController extends Controller
         $data = $request->all();
         $new = new \App\News();
         $new->create($data);
-        return redirect('noticia');
+        return redirect('/');
     
     }
-    public function delete($ID){
+    public function delete($id){
         
         $new = new \App\News();
-        $new->find($ID)->delete();
-        return redirect('noticia');
+        $new->find($id)->delete();
+        return redirect('/');
+    
+    }
+    public function about(){
+        
+        
+        return view('about');
     
     }
 }
