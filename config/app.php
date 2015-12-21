@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pt', 
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY', 'SomeRandomString'),
+    'key' => env('APP_KEY', 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDiZo1PCGOH8xUzHVHcQN6zMylKA+RDVOXUyu428hEuU5i+Lka0LsybUQsJASMGI9TEuG5IArWgwICiYIqit6TLX4m4eb603cnkbBx77UNA9naHQUtBrGEIO/Soeh6YKyKCw2fSEIlej6NfxTwL4ysJ1E5mQKtxr08mbY+hw5vzrXnpRok6vYtBsH9hiPJ1+6wgAtJzfgXUEHnEgoKnEmeGFnmDm2lMTrRBiUEtdD+tl835IkYzySYkQ2FdbxephCicbIjLGY1+KHOCg/QQadt01Z+aZMLo9y3/0KDW6NBeaLiorpdhdmwjbTZQYINZbCjOuo7aCU6K8K6IJcOKYI7t taylorsoft@taylorsoft-PC'),
 
     'cipher' => 'AES-256-CBC',
 
@@ -136,6 +136,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Illuminate\Html\HtmlServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -193,7 +194,10 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+        'Form'      => Illuminate\Html\FormFacade::class,
+        'Html'      => Illuminate\Html\HtmlFacade::class,
 
     ],
 
 ];
+
